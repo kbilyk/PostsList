@@ -9,6 +9,7 @@
 import Foundation
 
 enum JSONKeys {
+    static let identifier = "id"
     static let name = "name"
     static let username = "username"
     static let email = "email"
@@ -17,4 +18,8 @@ enum JSONKeys {
     static let suit = "suit"
     static let city = "city"
     static let zipcode = "zipcode"
+}
+
+enum SegueIdentifiers {
+    static let usersToPosts = "UsersToPostsSegue"
 }
