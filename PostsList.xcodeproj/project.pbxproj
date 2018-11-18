@@ -79,13 +79,10 @@
 		1AB8FFBB21A1389000CDCC5A /* PostsList */ = {
 			isa = PBXGroup;
 			children = (
-				1AB8FFBC21A1389000CDCC5A /* AppDelegate.swift */,
-				1AB8FFBE21A1389000CDCC5A /* ViewController.swift */,
-				1AB8FFC021A1389000CDCC5A /* Main.storyboard */,
+				1AB8FFDF21A13C2300CDCC5A /* Model */,
+				1AB8FFE021A13C2C00CDCC5A /* ViewController */,
 				1AB8FFC621A1389000CDCC5A /* Assets.xcassets */,
-				1AB8FFC821A1389000CDCC5A /* LaunchScreen.storyboard */,
-				1AB8FFCB21A1389000CDCC5A /* Info.plist */,
-				1AB8FFC321A1389000CDCC5A /* PostsList.xcdatamodeld */,
+				1AB8FFE121A13C3C00CDCC5A /* SupprotingFiles */,
 			);
 			path = PostsList;
 			sourceTree = "<group>";
@@ -97,6 +94,33 @@
 				1AB8FFD621A1389000CDCC5A /* Info.plist */,
 			);
 			path = PostsListTests;
+			sourceTree = "<group>";
+		};
+		1AB8FFDF21A13C2300CDCC5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AB8FFC321A1389000CDCC5A /* PostsList.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AB8FFE021A13C2C00CDCC5A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1AB8FFBE21A1389000CDCC5A /* ViewController.swift */,
+				1AB8FFC021A1389000CDCC5A /* Main.storyboard */,
+				1AB8FFC821A1389000CDCC5A /* LaunchScreen.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1AB8FFE121A13C3C00CDCC5A /* SupprotingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1AB8FFBC21A1389000CDCC5A /* AppDelegate.swift */,
+				1AB8FFCB21A1389000CDCC5A /* Info.plist */,
+			);
+			path = SupprotingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
