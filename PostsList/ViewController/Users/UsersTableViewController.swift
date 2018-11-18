@@ -22,6 +22,7 @@ class UsersTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Reqest
+        showHUD(animated: true)
         Alamofire.request("https://jsonplaceholder.typicode.com/users").responseJSON { (response) in
             // Serialization
             if let usersArray = JSON(response.result.value as Any).array {
@@ -61,6 +62,7 @@ class UsersTableViewController: UITableViewController {
                 }
             }
 
+            self.hideHUD(animated: true)
             self.tableView.reloadData()
         }
     }

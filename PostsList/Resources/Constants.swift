@@ -18,6 +18,8 @@ enum JSONKeys {
     static let suit = "suit"
     static let city = "city"
     static let zipcode = "zipcode"
+    static let title = "title"
+    static let body = "body"
 }
 
 enum SegueIdentifiers {

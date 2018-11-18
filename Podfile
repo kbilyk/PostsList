@@ -9,6 +9,7 @@ target 'PostsList' do
 
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'MBProgressHUD', '~> 1.1.0'
 
   target 'PostsListTests' do
     inherit! :search_paths

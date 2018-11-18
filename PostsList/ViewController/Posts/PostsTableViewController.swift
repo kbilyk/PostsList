@@ -24,19 +24,30 @@ class PostsTableViewController: UITableViewController {
 
         if let userIdentifier = userIdentifier {
             // Reqest
-            Alamofire.request("https://jsonplaceholder.typicode.com/posts?userId=\(String(userIdentifier))").responseJSON(completionHandler: { (response) in
-                print("Request: \(String(describing: response.request))")   // original url request
-                print("Response: \(String(describing: response.response))") // http url response
-                print("Result: \(response.result)")                         // response serialization result
+            showHUD(animated: true)
+            Alamofire.request("https://jsonplaceholder.typicode.com/posts?userId=\(String(userIdentifier))").responseJSON { (response) in
+                // Serialization
+                if let postJSONsArray = JSON(response.result.value as Any).array {
+                    for postJSON in postJSONsArray {
+                        var post: Dictionary <String, Any> = [:]
 
-                if let json = response.result.value {
-                    print("JSON: \(json)") // serialized json response
+                        if let identifier = postJSON[JSONKeys.identifier].int {
+                            post[JSONKeys.identifier] = identifier
+                        }
+                        if let title = postJSON[JSONKeys.title].string {
+                            post[JSONKeys.title] = title
+                        }
+                        if let body = postJSON[JSONKeys.body].string {
+                            post[JSONKeys.body] = body
+                        }
+
+                        self.posts?.append(post)
+                    }
                 }
 
-                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                    print("Data: \(utf8Text)") // original server data as UTF8 string
-                }
-            })
+                self.hideHUD(animated: true)
+                self.tableView.reloadData()
+            }
         }
     }
 
@@ -47,7 +58,18 @@ class PostsTableViewController: UITableViewController {
             return
         }
 
-        print(cell)
+        guard let posts = posts else {
+            return
+        }
+
+        if !posts.indices.contains(indexPath.row) {
+            return
+        }
+
+        let post = posts[indexPath.row]
+
+        cell.titleLabel.text = post[JSONKeys.title] as! String?
+        cell.bodyLabel.text = post[JSONKeys.body] as! String?
     }
 
     // MARK: - Table view data source
