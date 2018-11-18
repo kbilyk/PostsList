@@ -1,5 +1,5 @@
 //
-//  UsersTableViewController.swift
+//  PostsTableViewController.swift
 //  PostsList
 //
 //  Created by Kostiantyn Bilyk on 18.11.18.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class UsersTableViewController: UITableViewController {
+class PostsTableViewController: UITableViewController {
 
     // MARK: - View Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +28,7 @@ class UsersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.cellIdentifier, for: indexPath)
 
         // Configure the cell...
 
