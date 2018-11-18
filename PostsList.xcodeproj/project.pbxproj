@@ -113,10 +113,11 @@
 		1AB8FFBB21A1389000CDCC5A /* PostsList */ = {
 			isa = PBXGroup;
 			children = (
+				1AB8FFC621A1389000CDCC5A /* Assets.xcassets */,
 				1AB8FFDF21A13C2300CDCC5A /* Model */,
 				1AB8FFE021A13C2C00CDCC5A /* ViewController */,
-				1AB8FFED21A150DC00CDCC5A /* Resources */,
-				1AB8FFE121A13C3C00CDCC5A /* SupprotingFiles */,
+				1AB8FFED21A150DC00CDCC5A /* Extensions & Constants */,
+				1AB8FFE121A13C3C00CDCC5A /* Supprot Files */,
 			);
 			path = PostsList;
 			sourceTree = "<group>";
@@ -149,14 +150,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		1AB8FFE121A13C3C00CDCC5A /* SupprotingFiles */ = {
+		1AB8FFE121A13C3C00CDCC5A /* Supprot Files */ = {
 			isa = PBXGroup;
 			children = (
 				1AB8FFBC21A1389000CDCC5A /* AppDelegate.swift */,
 				1AB8FFCB21A1389000CDCC5A /* Info.plist */,
 				1A149ABD21A1FDAB007F4355 /* PostsList-Bridging-Header.h */,
 			);
-			path = SupprotingFiles;
+			path = "Supprot Files";
 			sourceTree = "<group>";
 		};
 		1AB8FFE721A1449200CDCC5A /* Users */ = {
@@ -177,14 +178,13 @@
 			path = Posts;
 			sourceTree = "<group>";
 		};
-		1AB8FFED21A150DC00CDCC5A /* Resources */ = {
+		1AB8FFED21A150DC00CDCC5A /* Extensions & Constants */ = {
 			isa = PBXGroup;
 			children = (
-				1AB8FFC621A1389000CDCC5A /* Assets.xcassets */,
 				1AB8FFEF21A1512300CDCC5A /* Extensions.swift */,
 				1A4C4D6721A1CF70008A18DD /* Constants.swift */,
 			);
-			path = Resources;
+			path = "Extensions & Constants";
 			sourceTree = "<group>";
 		};
 		A372FEA1126A0ABAF28AA280 /* Frameworks */ = {
