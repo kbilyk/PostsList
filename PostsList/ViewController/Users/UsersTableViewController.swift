@@ -7,14 +7,59 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class UsersTableViewController: UITableViewController {
+
+    // MARK: - Variables
+
+    var users: Array<Dictionary<String, Any>>? = []
 
     // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Reqest
+        Alamofire.request("https://jsonplaceholder.typicode.com/users").responseJSON { (response) in
+            // Serialization
+            if let usersArray = JSON(response.result.value as Any).array {
+                for userJSON in usersArray {
+                    var user: Dictionary <String, Any> = [:]
+
+                    if let name = userJSON[JSONKeys.name].string {
+                        user[JSONKeys.name] = name
+                    }
+                    if let username = userJSON[JSONKeys.username].string {
+                        user[JSONKeys.username] = username
+                    }
+                    if let email = userJSON[JSONKeys.email].string {
+                        user[JSONKeys.email] = email
+                    }
+                    if let addressDictionary = userJSON[JSONKeys.address].dictionary {
+                        var address: Dictionary <String, String> = [:]
+
+                        if let street = addressDictionary[JSONKeys.street]?.string {
+                            address[JSONKeys.street] = street
+                        }
+                        if let suit = addressDictionary[JSONKeys.suit]?.string {
+                            address[JSONKeys.suit] = suit
+                        }
+                        if let city = addressDictionary[JSONKeys.city]?.string {
+                            address[JSONKeys.city] = city
+                        }
+                        if let zipcode = addressDictionary[JSONKeys.zipcode]?.string {
+                            address[JSONKeys.zipcode] = zipcode
+                        }
+                        user[JSONKeys.address] = address
+                    }
+                    self.users?.append(user)
+                }
+            }
+
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Configuration
@@ -24,7 +69,34 @@ class UsersTableViewController: UITableViewController {
             return
         }
 
-        print("\(cell)")
+        guard let users = users else {
+            return
+        }
+
+        if !users.indices.contains(indexPath.row) {
+            return
+        }
+
+        let user = users[indexPath.row]
+
+        cell.nameLabel.text = user[JSONKeys.name] as! String?
+        cell.usernameLabel.text = user[JSONKeys.username] as! String?
+        cell.emailLabel.text = user[JSONKeys.email] as! String?
+        if let address = user[JSONKeys.address] as? Dictionary<String, String> {
+            var addressLabelText = address[JSONKeys.street] ?? ""
+
+            if let suit = address[JSONKeys.suit] {
+                addressLabelText.append(addressLabelText.isEmpty ? suit : ", \(suit)")
+            }
+            if let city = address[JSONKeys.city] {
+                addressLabelText.append(addressLabelText.isEmpty ? city : ", \(city)")
+            }
+            if let zipcode = address[JSONKeys.zipcode] {
+                addressLabelText.append(addressLabelText.isEmpty ? zipcode : ", \(zipcode)")
+            }
+
+            cell.addressLabel.text = addressLabelText
+        }
     }
 
     // MARK: - Table view data source
@@ -34,7 +106,11 @@ class UsersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        guard let users = users else {
+            return 0
+        }
+
+        return users.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -32,7 +32,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuP-ju-2UX" userLabel="Name View">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="36.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVe-vm-gP9" userLabel="Name Title Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVe-vm-gP9" userLabel="Name Title Label">
                                                     <rect key="frame" x="8" y="8" width="83.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -58,7 +58,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqc-2J-fU5" userLabel="Username View">
                                             <rect key="frame" x="0.0" y="36.5" width="341" height="37"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olV-2A-QJ5" userLabel="Username Title Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olV-2A-QJ5" userLabel="Username Title Label">
                                                     <rect key="frame" x="8" y="8" width="83.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -84,7 +84,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxJ-dA-6ht" userLabel="Email View">
                                             <rect key="frame" x="0.0" y="73.5" width="341" height="36.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHY-Vm-3TT" userLabel="Email Title Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHY-Vm-3TT" userLabel="Email Title Label">
                                                     <rect key="frame" x="8" y="8" width="83.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -110,7 +110,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYk-do-ZYg" userLabel="Address View">
                                             <rect key="frame" x="0.0" y="110" width="341" height="36.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQy-0x-n23" userLabel="Address Title Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQy-0x-n23" userLabel="Address Title Label">
                                                     <rect key="frame" x="8" y="8" width="83.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -127,7 +127,7 @@
                                                 <constraint firstItem="5kd-LL-Vej" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="BYk-do-ZYg" secondAttribute="trailing" constant="-8" id="GWd-sr-BjQ"/>
                                                 <constraint firstItem="5kd-LL-Vej" firstAttribute="leading" secondItem="oQy-0x-n23" secondAttribute="trailing" constant="8" id="LVh-1d-YIw"/>
                                                 <constraint firstItem="5kd-LL-Vej" firstAttribute="top" secondItem="BYk-do-ZYg" secondAttribute="top" constant="8" id="QRM-hx-Zx5"/>
-                                                <constraint firstItem="oQy-0x-n23" firstAttribute="bottom" secondItem="BYk-do-ZYg" secondAttribute="bottom" constant="-8" id="Shy-UW-5ls"/>
+                                                <constraint firstItem="oQy-0x-n23" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="BYk-do-ZYg" secondAttribute="bottom" constant="-8" id="Shy-UW-5ls"/>
                                                 <constraint firstAttribute="bottom" secondItem="5kd-LL-Vej" secondAttribute="bottom" constant="8" id="ild-nN-NHZ"/>
                                                 <constraint firstItem="oQy-0x-n23" firstAttribute="leading" secondItem="BYk-do-ZYg" secondAttribute="leading" constant="8" id="l6b-1F-E5x"/>
                                                 <constraint firstItem="oQy-0x-n23" firstAttribute="top" secondItem="BYk-do-ZYg" secondAttribute="top" constant="8" id="qSq-q1-V0I"/>
@@ -168,6 +168,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Users" id="UXy-5O-WYa"/>
+                    <connections>
+                        <outlet property="tableView" destination="XsE-Li-JW6" id="0ui-ey-1fs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9g1-xZ-ged" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
