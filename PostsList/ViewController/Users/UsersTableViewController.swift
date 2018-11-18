@@ -17,6 +17,16 @@ class UsersTableViewController: UITableViewController {
 
     }
 
+    // MARK: - Configuration
+
+    fileprivate func configure(_ cell: UITableViewCell, at indexPath: IndexPath) {
+        guard let cell = cell as? UserTableViewCell else {
+            return
+        }
+
+        print("\(cell)")
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,7 +40,7 @@ class UsersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.cellIdentifier, for: indexPath)
 
-        // Configure the cell...
+        configure(cell, at: indexPath)
 
         return cell
     }

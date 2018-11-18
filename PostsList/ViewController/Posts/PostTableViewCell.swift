@@ -10,6 +10,13 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    // MARK: - Outlets
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
+
+    // MARK: - View Lifecycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

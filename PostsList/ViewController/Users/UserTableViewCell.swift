@@ -10,6 +10,15 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
 
+    // MARK: - Outlets
+
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    // MARK: - View Lifecycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

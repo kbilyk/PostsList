@@ -17,6 +17,16 @@ class PostsTableViewController: UITableViewController {
 
     }
 
+    // MARK: - Configuration
+
+    fileprivate func configure(_ cell: UITableViewCell, at indexPath: IndexPath) {
+        guard let cell = cell as? PostTableViewCell else {
+            return
+        }
+
+        print("\(cell)")
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,7 +40,7 @@ class PostsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.cellIdentifier, for: indexPath)
 
-        // Configure the cell...
+        configure(cell, at: indexPath)
 
         return cell
     }

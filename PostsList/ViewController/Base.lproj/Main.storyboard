@@ -154,7 +154,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="AMK-VE-CuZ" kind="push" id="8TW-OU-9B7"/>
+                                    <outlet property="addressLabel" destination="5kd-LL-Vej" id="3Mw-Qn-Io9"/>
+                                    <outlet property="emailLabel" destination="IKc-PS-Os1" id="TTx-lh-9je"/>
+                                    <outlet property="nameLabel" destination="1Jv-CE-bRu" id="9Mm-5D-Im1"/>
+                                    <outlet property="usernameLabel" destination="Eta-pf-hyU" id="skq-2g-NCW"/>
+                                    <segue destination="AMK-VE-CuZ" kind="show" identifier="UsersToPostsSegue" id="8TW-OU-9B7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -213,6 +217,10 @@
                                         <constraint firstItem="ibH-lq-HZV" firstAttribute="trailing" secondItem="BXz-Zg-6Q7" secondAttribute="trailing" constant="-8" id="xay-Xt-691"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bodyLabel" destination="ibH-lq-HZV" id="a69-rB-932"/>
+                                    <outlet property="titleLabel" destination="qiV-NI-qNE" id="EKA-01-lbK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
